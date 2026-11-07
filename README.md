@@ -22,7 +22,7 @@ Forum, Support und Benutzerkonto: <https://forum.international-roleplay.net>
 ## Datei prüfen
 Jede Release-Seite nennt die SHA-256-Prüfsumme der ZIP-Datei (zusätzlich als `.sha256`-Datei).
 ```powershell
-Get-FileHash .\IRP_Launcher_0.9_Beta_1.17.3.zip -Algorithm SHA256
+Get-FileHash .\IRP_Launcher_0.9_Beta_1.17.4.zip -Algorithm SHA256
 ```
 
 ## Verbindungen
