@@ -2,40 +2,28 @@
 
 Offizieller Launcher für **International Roleplay 0.9 Beta** (GTA San Andreas, open.mp-Server).
 
-> **Öffentliche Beta.** Die Registrierung neuer Konten ist während der Beta geschlossen. Probleme bitte im Forum melden.
+> **International Roleplay ist in der öffentlichen Beta.** Die Registrierung neuer Konten ist während der Beta geschlossen. Probleme bitte im Forum melden.
 
-## Download
-
-| | Version | Datei |
-|---|---|---|
-| **Stabil (empfohlen)** | **1.17.3** | [Release „Latest“](https://github.com/hanma-hub/international-roleplay-launcher/releases/latest) – `IRP_Launcher_0.9_Beta_1.17.3.zip` |
-| Testversion (Vorabversion) | 1.21.0 | [Release v1.21.0](https://github.com/hanma-hub/international-roleplay-launcher/releases/tag/v1.21.0) – `International-Roleplay-Launcher.exe` (eine einzige Datei) |
-
-Die **Testversion** ist für Tester gedacht: Sie wurde auf Windows 11 geprüft (Fenster, Selbsttest, Startprüfung, Verbindungstest, signierte Update-Liste, Windows-Defender-Prüfung ohne Befund), ein vollständiger Spielstart mit GTA auf einem Spiele-PC ist aber **noch nicht bestätigt**. Zum normalen Spielen bitte die stabile Version verwenden. Die Testversion ersetzt die stabile Version nicht automatisch.
-
+**Download:** [Neueste Version (1.21.0)](https://github.com/hanma-hub/international-roleplay-launcher/releases/latest) – **eine einzige Datei** `International-Roleplay-Launcher.exe`
 Forum, Support und Benutzerkonto: <https://forum.international-roleplay.net>
 
 ## Voraussetzungen
 - GTA San Andreas für PC (Version 1.0 US) mit SA-MP-Client 0.3.7-R5 oder einem kompatiblen open.mp-Client
 - Windows 10 oder 11 (64 Bit). Keine Administratorrechte nötig.
-- Nur für die Testversion 1.21.0: Microsoft Edge WebView2-Laufzeit (bei Windows 11 vorinstalliert). Fehlt sie, öffnet der Launcher den offiziellen Microsoft-Download.
+- Microsoft Edge WebView2-Laufzeit (für das Launcher-Fenster) – bei Windows 11 vorinstalliert, bei Windows 10 fast immer über Windows-Updates vorhanden. Fehlt sie, öffnet der Launcher den offiziellen Microsoft-Download.
 
-## Installation
-**Stabile Version 1.17.3**
-1. ZIP-Datei von der Release-Seite laden und an einen beliebigen Ort entpacken – **nicht** in den GTA-Ordner.
-2. `Launcher.exe` starten und beim ersten Start den GTA-San-Andreas-Ordner wählen (dort liegen `gta_sa.exe` und `samp.exe`).
+## Installation und Start
+1. `International-Roleplay-Launcher.exe` von der Release-Seite laden (z. B. in *Downloads* oder auf den Desktop) – **nicht** in den GTA-Ordner. Es gibt nichts zu entpacken.
+2. Datei starten und beim ersten Start den GTA-San-Andreas-Ordner wählen (dort liegen `gta_sa.exe` und `samp.exe`).
 3. Spielernamen eintragen (neue Spieler: `Vorname_Nachname`), Sprache wählen, **SPIELEN**. Das Passwort gibst du erst im Spiel ein; der Launcher speichert keine Passwörter.
 
-**Testversion 1.21.0**
-1. `International-Roleplay-Launcher.exe` laden (z. B. in *Downloads* oder auf den Desktop) – **nicht** in den GTA-Ordner. Es gibt nichts zu entpacken.
-2. Datei starten, GTA-Ordner wählen, Namen eintragen, **SPIELEN**. Einstellungen liegen in `%LOCALAPPDATA%\IRPLauncher`. Willst du Name, Sprache und GTA-Ordner der bisherigen Version übernehmen, lege die Datei in den bisherigen Launcher-Ordner (neben `launcher.json`).
-
-Das Spiel startet immer aus deinem GTA-Ordner; der Launcher verändert ihn nicht.
+Das Spiel startet immer aus deinem GTA-Ordner; der Launcher verändert ihn nicht. Er setzt nur – wie der SA-MP-Client selbst – Spielernamen und GTA-Pfad in den SA-MP-Einstellungen von Windows.
+Einstellungen und Protokolle legt der Launcher in `%LOCALAPPDATA%\IRPLauncher` ab (nicht neben der Datei).
+**Update von einer älteren Version (ZIP mit `Launcher.exe`):** Die neue Datei einfach starten. Willst du Name, Sprache und GTA-Ordner übernehmen, lege sie in den bisherigen Launcher-Ordner (neben `launcher.json`). `WebView2Loader.dll` aus älteren Paketen wird nicht mehr benötigt.
 
 ## Datei prüfen
 Jede Release-Seite nennt die SHA-256-Prüfsumme (zusätzlich als `.sha256`-Datei).
 ```powershell
-Get-FileHash .\IRP_Launcher_0.9_Beta_1.17.3.zip -Algorithm SHA256
 Get-FileHash .\International-Roleplay-Launcher.exe -Algorithm SHA256
 ```
 
@@ -47,16 +35,17 @@ Der Launcher baut nur diese Verbindungen auf (fest eingebaut, kein Rückfall auf
 | Status, Neuigkeiten, Updates (HTTPS) | `https://launcher.international-roleplay.net` (Cloudflare) |
 | Downloads | GitHub Releases |
 
-Die Update-Liste ist mit Ed25519 signiert; unsignierte oder veränderte Angaben werden abgelehnt. Die Programmdatei ersetzt sich nie selbst.
+Hinweise auf neue Versionen kommen über eine mit Ed25519 signierte Liste; die Programmdatei ersetzt sich nie selbst.
 
 ## Häufige Probleme
-- **Windows SmartScreen** („Der Computer wurde durch Windows geschützt“, „unbekannter Herausgeber“): Das ist keine Virenmeldung, sondern fehlende Bekanntheit – der Launcher ist (noch) nicht mit einem Code-Signing-Zertifikat signiert. Lade ihn nur von dieser Release-Seite oder über den Download im Forum und vergleiche die Prüfsumme; ob du ihn dann startest, entscheidest du.
+- **Windows SmartScreen** („Der Computer wurde durch Windows geschützt“, „unbekannter Herausgeber“): Das ist keine Virenmeldung, sondern fehlende Bekanntheit – der Launcher ist (noch) nicht mit einem Code-Signing-Zertifikat signiert. Lade ihn nur von dieser Release-Seite und vergleiche die Prüfsumme; ob du ihn dann über „Weitere Informationen“ startest, entscheidest du.
 - **Windows Defender meldet einen Virus**: Datei nicht wiederherstellen und keine Ausnahme eintragen, sondern im Forum-Support melden – mit dem Namen der Erkennung aus *Windows-Sicherheit → Schutzverlauf*.
-- **„Server nicht erreichbar“ / Spiel startet nicht**: Version 1.17.3: `verbindungstest.bat` im Launcher-Ordner starten und `verbindungstest.txt` im Support zeigen. Testversion 1.21.0: *Einstellungen → Startprüfung → Prüfen* (verändert nichts, enthält auch den Verbindungstest).
+- **Spiel startet nicht / „SA-MP: An exception occurred“ / „Server nicht erreichbar“**: Im Launcher *Einstellungen → Startprüfung → Prüfen*. Die Prüfung verändert nichts und nennt u. a. GTA- und SA-MP-Version, ASI-/Grafik-Mods, Mod Loader, CLEO, den letzten SA-MP-Absturz und das Ergebnis eines Verbindungstests. Den Bericht („Bericht öffnen“) nur im Support zeigen, wenn du möchtest – er enthält Ordner- und Mod-Dateinamen, aber keine Passwörter.
+- **Fenster bleibt leer oder Meldung zur WebView2-Laufzeit**: Windows-Updates installieren oder die Laufzeit über den angezeigten Microsoft-Link neu installieren.
 - **GTA-Ordner nicht erkannt**: Im Launcher den Ordner mit `gta_sa.exe` auswählen.
 
 ## Zurück zur vorherigen Version
-Alle veröffentlichten Versionen bleiben auf der [Release-Seite](https://github.com/hanma-hub/international-roleplay-launcher/releases).
+Die vorherige Version **1.17.3** (ZIP mit `Launcher.exe`) bleibt als Rückfallversion auf der [Release-Seite](https://github.com/hanma-hub/international-roleplay-launcher/releases). Empfohlen ist die aktuelle Version.
 
 ## Sicherheit
 Siehe [SECURITY.md](SECURITY.md). Dieses Repository enthält nur den veröffentlichten Launcher und seine Dokumentation – keinen Servercode, keine Konfigurationen, keine Zugangsdaten.
