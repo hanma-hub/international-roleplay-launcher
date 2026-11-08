@@ -1,8 +1,9 @@
 # Änderungen (Launcher)
 
-> Stabile Version: **1.17.3**. **1.21.0** ist eine Testversion (Vorabversion) für Tester. Die Versionen 1.17.4 bis 1.20.1 wurden nur intern gebaut und geprüft und nie veröffentlicht – ihre Änderungen sind in 1.21.0 enthalten (das Optik-Paket aus 1.18/1.19 ist seit 1.20.0 wieder entfernt).
+> Aktuelle stabile Version: **1.21.0** (seit 08.11.2026). Die vorherige stabile Version **1.17.3** bleibt als Rückfallversion auf der Release-Seite. Die Versionen 1.17.4 bis 1.20.1 wurden nur intern gebaut und geprüft und nie veröffentlicht – ihre Änderungen sind in 1.21.0 enthalten (das Optik-Paket aus 1.18/1.19 ist seit 1.20.0 wieder entfernt).
 
-## 1.21.0 – International Roleplay 0.9 Beta – TESTVERSION (Vorabversion)
+## 1.21.0 – International Roleplay 0.9 Beta – stabile Version
+- Status: auf Windows 11 geprüft (Fenster, Selbsttest, Startprüfung, Verbindungstest, signierte Update-Liste, Windows-Defender-Prüfung ohne Befund) und auf einem Spiele-PC getestet (Download und Start ohne Windows-Meldung, Spielstart über SPIELEN, Beitritt zum Server). Vom 08.11.2026 an zunächst als Testversion (Vorabversion) veröffentlicht, danach zur stabilen Version erklärt.
 - **Eine einzige Datei:** `International-Roleplay-Launcher.exe` statt ZIP mit `Launcher.exe` und `WebView2Loader.dll`. Es wird keine DLL mitgeliefert, eingebettet, entpackt oder aus dem Speicher geladen: Das Launcher-Fenster nutzt die auf dem PC installierte Microsoft Edge WebView2-Laufzeit und lädt deren eigene, von Microsoft signierte Datei aus dem Programme-Ordner der Laufzeit.
 - Fehlt die WebView2-Laufzeit, erklärt eine Meldung das und öffnet den offiziellen Microsoft-Download. Der Launcher lädt selbst keine Installer herunter und startet keine.
 - Einstellungen und Protokolle liegen in `%LOCALAPPDATA%\IRPLauncher` – neben der heruntergeladenen Datei entstehen keine weiteren Dateien. Liegt die Datei in einem bisherigen Launcher-Ordner mit `launcher.json`, bleibt dieser Ordner wie bisher in Gebrauch.
@@ -47,7 +48,7 @@
 - Das Fenster lässt sich jetzt vergrößern, verkleinern und maximieren und startet auf kleinen Bildschirmen passend im sichtbaren Bereich (vorher lag die Unterkante teils unter der Taskleiste).
 - Keine weiteren Änderungen: gleiche Adressen, gleiche Update-Prüfung, keine Mods.
 
-## 1.17.3 – International Roleplay 0.9 Beta – stabile Version (öffentliche Beta)
+## 1.17.3 – International Roleplay 0.9 Beta – vorherige stabile Version (Rückfallversion)
 - Status: Launcher auf Windows geprüft; vollständiger Spielstart mit GTA über diese Version noch nicht bestätigt.
 - Kontonamen mit Punkt (z. B. umbenannte Konten) werden akzeptiert; neue Spieler wählen im Spiel weiter `Vorname_Nachname`.
 - Status, Neuigkeiten und Updates nur über HTTPS (Cloudflare); Spielverbindung nur über den DDoS-Schutz.
