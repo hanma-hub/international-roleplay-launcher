@@ -1,6 +1,15 @@
 # Änderungen (Launcher)
 
-> Aktuelle stabile Version: **1.21.0** (seit 08.11.2026). Die vorherige stabile Version **1.17.3** bleibt als Rückfallversion auf der Release-Seite. Die Versionen 1.17.4 bis 1.20.1 wurden nur intern gebaut und geprüft und nie veröffentlicht – ihre Änderungen sind in 1.21.0 enthalten (das Optik-Paket aus 1.18/1.19 ist seit 1.20.0 wieder entfernt).
+> Aktuelle stabile Version: **1.21.1** (seit 08.11.2026). Die vorherige stabile Version **1.21.0** bleibt als Rückfallversion auf der Release-Seite (ebenso die ältere 1.17.3). Die Versionen 1.17.4 bis 1.20.1 wurden nur intern gebaut und geprüft und nie veröffentlicht – ihre Änderungen sind in 1.21.0 enthalten (das Optik-Paket aus 1.18/1.19 ist seit 1.20.0 wieder entfernt).
+
+## 1.21.1 – International Roleplay 0.9 Beta – stabile Version (Fehlerbehebung)
+- Status: auf Windows 11 geprüft (Fenster, Selbsttest, Startprüfung, Verbindungstest über den DDoS-Schutz, Windows-Defender-Prüfung ohne Befund).
+- **Statusanzeige:** Der DDoS-Schutz beantwortet Statusabfragen aus einem Zwischenspeicher; nach einer Pause oder einem Serverneustart bleiben die ersten Abfragen ohne Antwort. Der Launcher fragt jetzt bis zu 10 Sekunden lang (höchstens einmal pro Sekunde) statt etwa 5 Sekunden. Vorher erschien in diesem Fall „Läuft – von diesem PC nicht erreichbar“ mit „0 ms“, obwohl der Server lief und das Spiel verbinden konnte.
+- **Ping** nur noch, wenn er wirklich gemessen wurde (sonst „–“). Neuer Zustand „Online (ohne Ping)“ (orange, Erklärung beim Darüberfahren): Launcher-Dienst meldet den Server als online, die direkte Abfrage dieses PCs blieb ohne Antwort. „Status unbekannt“ ist grau statt rot.
+- **SPIELEN** wird nicht mehr gesperrt, nur weil die Statusabfrage keine Antwort bekam: Start mit Hinweis, SA-MP verbindet selbst. Gesperrt nur bei bestätigt ausgeschaltetem oder vollem Server.
+- **Aktualisieren-Knopf** (Kreispfeil oben neben Status, Spielern und Ping, ebenso der Knopf auf der Seite „Serverstatus“): fragt Serverstatus, Spielerzahl, Ping, Serverversion und Launcher-Updates sofort neu ab; das Symbol dreht sich währenddessen. Die automatische Aktualisierung alle 15 Sekunden bleibt.
+- Verbindungstest und Protokoll (`launcher_log.txt`) nennen jetzt Zahl der Abfragen und Wartezeit bis zur Antwort.
+- Unverändert: Design, Start aus dem GTA-Ordner, gleiche Adressen, gleiche Signaturprüfung (Ed25519).
 
 ## 1.21.0 – International Roleplay 0.9 Beta – stabile Version
 - Status: auf Windows 11 geprüft (Fenster, Selbsttest, Startprüfung, Verbindungstest, signierte Update-Liste, Windows-Defender-Prüfung ohne Befund) und auf einem Spiele-PC getestet (Download und Start ohne Windows-Meldung, Spielstart über SPIELEN, Beitritt zum Server). Vom 08.11.2026 an zunächst als Testversion (Vorabversion) veröffentlicht, danach zur stabilen Version erklärt.
