@@ -4,7 +4,7 @@ Offizieller Launcher für **International Roleplay 0.9 Beta** (GTA San Andreas, 
 
 > **International Roleplay ist in der öffentlichen Beta.** Die Registrierung neuer Konten ist während der Beta geschlossen. Probleme bitte im Forum melden.
 
-**Download:** [Neueste Version (1.21.0)](https://github.com/hanma-hub/international-roleplay-launcher/releases/latest) – **eine einzige Datei** `International-Roleplay-Launcher.exe`
+**Download:** [Neueste Version (1.21.1)](https://github.com/hanma-hub/international-roleplay-launcher/releases/latest) – **eine einzige Datei** `International-Roleplay-Launcher.exe`
 Forum, Support und Benutzerkonto: <https://forum.international-roleplay.net>
 
 ## Voraussetzungen
@@ -40,12 +40,13 @@ Hinweise auf neue Versionen kommen über eine mit Ed25519 signierte Liste; die P
 ## Häufige Probleme
 - **Windows SmartScreen** („Der Computer wurde durch Windows geschützt“, „unbekannter Herausgeber“): Das ist keine Virenmeldung, sondern fehlende Bekanntheit – der Launcher ist (noch) nicht mit einem Code-Signing-Zertifikat signiert. Lade ihn nur von dieser Release-Seite und vergleiche die Prüfsumme; ob du ihn dann über „Weitere Informationen“ startest, entscheidest du.
 - **Windows Defender meldet einen Virus**: Datei nicht wiederherstellen und keine Ausnahme eintragen, sondern im Forum-Support melden – mit dem Namen der Erkennung aus *Windows-Sicherheit → Schutzverlauf*.
+- **Status „Online (ohne Ping)“**: Der Launcher-Dienst meldet den Server als online, aber die direkte Statusabfrage dieses PCs über den DDoS-Schutz bekam (noch) keine Antwort – meist kurz nach einem Serverneustart. **SPIELEN funktioniert trotzdem**; mit dem Kreispfeil oben neu abfragen.
 - **Spiel startet nicht / „SA-MP: An exception occurred“ / „Server nicht erreichbar“**: Im Launcher *Einstellungen → Startprüfung → Prüfen*. Die Prüfung verändert nichts und nennt u. a. GTA- und SA-MP-Version, ASI-/Grafik-Mods, Mod Loader, CLEO, den letzten SA-MP-Absturz und das Ergebnis eines Verbindungstests. Den Bericht („Bericht öffnen“) nur im Support zeigen, wenn du möchtest – er enthält Ordner- und Mod-Dateinamen, aber keine Passwörter.
 - **Fenster bleibt leer oder Meldung zur WebView2-Laufzeit**: Windows-Updates installieren oder die Laufzeit über den angezeigten Microsoft-Link neu installieren.
 - **GTA-Ordner nicht erkannt**: Im Launcher den Ordner mit `gta_sa.exe` auswählen.
 
 ## Zurück zur vorherigen Version
-Die vorherige Version **1.17.3** (ZIP mit `Launcher.exe`) bleibt als Rückfallversion auf der [Release-Seite](https://github.com/hanma-hub/international-roleplay-launcher/releases). Empfohlen ist die aktuelle Version.
+Die vorherige Version **1.21.0** bleibt als Rückfallversion auf der [Release-Seite](https://github.com/hanma-hub/international-roleplay-launcher/releases) (ebenso die ältere 1.17.3). Empfohlen ist die aktuelle Version.
 
 ## Sicherheit
 Siehe [SECURITY.md](SECURITY.md). Dieses Repository enthält nur den veröffentlichten Launcher und seine Dokumentation – keinen Servercode, keine Konfigurationen, keine Zugangsdaten.
